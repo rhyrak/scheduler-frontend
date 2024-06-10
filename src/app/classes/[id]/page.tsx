@@ -18,7 +18,7 @@ export default function Page() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3001/schedule/" + id)
+    fetch(process.env.SERVER_ENDPOINT + "/" + id)
       .then((res) => res.json())
       .catch(() => {
         setLoading(false);

@@ -13,7 +13,7 @@ export default function Home() {
         </a>
         <hr className="invisible my-4" />
         <ScheduleSelector
-          api="http://localhost:3001/schedule"
+          api={process.env.NEXT_PUBLIC_SERVER_ENDPOINT as string}
           hrefBase="/regular/"
         />
         <hr className="invisible my-4" />

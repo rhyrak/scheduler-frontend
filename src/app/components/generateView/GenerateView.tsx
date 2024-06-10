@@ -60,7 +60,7 @@ function GenerateView() {
 
 async function handleGenerate(setResponse: Function) {
   const formData = generateFormData();
-  await fetch("http://localhost:3001/schedule", {
+  await fetch(process.env.NEXT_PUBLIC_SERVER_ENDPOINT as string, {
     method: "POST",
     body: formData,
   })

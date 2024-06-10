@@ -20,7 +20,7 @@ export default function Page() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3001/schedule/" + id)
+    fetch((process.env.NEXT_PUBLIC_SERVER_ENDPOINT as string) + "/" + id)
       .then((res) => res.json())
       .catch(() => {
         setLoading(false);
