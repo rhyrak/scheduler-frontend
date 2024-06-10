@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Busy } from "../../models";
-import DaysDropdown from "../DaysDropdown";
 import Dropdown from "../Dropdown";
 import { Repository } from "@/app/repository";
 import SearchDropdown from "../SearchDropdown";
+import { useTranslation } from "react-i18next";
 
 const AddBusyForm = ({ handler }: { handler: Function }) => {
+  const [t, i18n] = useTranslation("global");
   const [busy, setBusy] = useState<Busy>({
     Busy_Day: "",
     Lecturer: "",
@@ -23,11 +24,12 @@ const AddBusyForm = ({ handler }: { handler: Function }) => {
         name="Lecturer"
         value={busy.Lecturer}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Lecturer"
+        placeholder={t("busy.lecturer")}
         disabled
       />
       <SearchDropdown
-        title="Select Lecturer"
+        title={t("busy.selectLecturer")}
+        openTitle={t("busy.selectLecturer")}
         options={Repository.GetProfessors()}
         setSelected={(s: string) => {
           setBusy({ ...busy, Lecturer: s });
@@ -38,11 +40,12 @@ const AddBusyForm = ({ handler }: { handler: Function }) => {
         name="Busy_Day"
         value={busy.Busy_Day}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Busy Day"
+        placeholder={t("busy.busyDay")}
         disabled
       />
       <Dropdown
-        title="Select Day"
+        title={t("busy.selectDay")}
+        openTitle={t("busy.selectDay")}
         options={["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]}
         setSelected={(s: string) => {
           setBusy({ ...busy, Busy_Day: s });
@@ -52,7 +55,7 @@ const AddBusyForm = ({ handler }: { handler: Function }) => {
         type="submit"
         className="px-6 py-3 !mt-8 w-full font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-full"
       >
-        Add
+        {t("button.add")}
       </button>
     </form>
   );

@@ -7,7 +7,6 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import DaysDropdown from "../DaysDropdown";
 import Dropdown from "../Dropdown";
 import { Repository } from "@/app/repository";
 import SearchDropdown from "../SearchDropdown";

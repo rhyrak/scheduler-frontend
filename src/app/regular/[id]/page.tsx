@@ -9,8 +9,10 @@ import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
 import * as XLSX from "xlsx";
 import Papa from "papaparse";
 import { ResultRow } from "@/app/models";
+import { useTranslation } from "react-i18next";
 
 export default function Page() {
+  const [t, i18n] = useTranslation("global");
   const [csvContent, setCsvContent] = useState("");
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
@@ -59,12 +61,11 @@ export default function Page() {
       .catch(() => {});
   }, [id]);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <p>{t("feedback.loading")}</p>;
   if (!data)
     return (
       <h3 className="m-auto text-center mt-4 text-lg">
-        Please wait while your schedule is being created. This process may take
-        a few minutes.
+        {t("feedback.generating")}
       </h3>
     );
 

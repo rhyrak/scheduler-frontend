@@ -1,74 +1,127 @@
 {
-    "home": {
-        "nav": {
-            "first": "All Schedules",
-            "second": "All Schedules With Professor Names",
-            "third": "Professor-Oriented Schedule",
-            "fourth": "Classroom-Oriented Schedule"
-        },
-        "selector": {
-            "classroom": "CLASSROOM",
-            "busy": "BUSY",
-            "conflict": "CONFLICT",
-            "split": "SPLIT",
-            "reserved": "RESERVED",
-            "course": "COURSE"
-        },
-        "classroom": {
-            "header": "YOU CAN ADD OR REMOVE CLASSROOMS",
-            "buttontext": "Upload CSV File",
-            "first": "Floor Number",
-            "second": "Classroom ID",
-            "third": "Capacity",
-            "fourth": "Available Days",
-            "form": {
-                "add": "ADD",
-                "update": "UPDATE"
-            }
-        },
-        "busy": {
-            "header": "ENTER A BUSY TIME FOR A PROFESSOR",
-            "first": "Professor Name",
-            "second": "Busy Day",
-            "form": {
-                "first": "Professor Name",
-                "second": "Select Busy Time"
-            }
-        },
-        "conflict": {
-            "header": "EXPLICITLY SPECIFY COURSES THAT CONFLICT WITH EACH OTHER",
-            "first": "First Department",
-            "second": "First Course",
-            "third": "Second Department",
-            "fourth": "Second Course"
-        },
-        "split": {
-            "header": "SPLIT HOURS OF A COURSE INTO TWO PARTS",
-            "first": "Department",
-            "second": "Course Code",
-            "third": "Half Duration"
-        },
-        "reserved": {
-            "header": "RESERVE TIME FOR A SPECIFIC COURSE",
-            "first": "Department",
-            "second": "Course Code",
-            "third": "Course Day",
-            "fourth": "Starting Time",
-            "form": {
-                "first": "Department",
-                "second": "Course Code",
-                "third": "Select Day",
-                "fourth": "Select Starting Time"
-            }
-        },
-        "course": {
-            "header": "YOU CAN SELECT COURSES FILE AND GENERATE A SCHEDULE",
-            "label": "Courses:",
-            "submit": "SUBMIT",
-            "p": "Schedule created",
-            "view": "VIEW",
-            "create": "GENERATE SCHEDULE"
+    "nav": {
+        "all": "All Schedules",
+        "withNames": "All Schedules With Professor Names",
+        "professors": "Professor-Oriented Schedule",
+        "classrooms": "Classroom-Oriented Schedule"
+    },
+    "busy": {
+        "lecturer": "Lecturer",
+        "selectLecturer": "Select Lecturer",
+        "busyDay": "Busy Day",
+        "selectDay": "Select Day",
+        "headers": {
+            "lecturer": "Lecturer",
+            "busyDay": "Busy Day",
+            "actions": "Actions"
         }
+    },
+    "classrooms": {
+        "floor": "Floor",
+        "code": "Classroom Code",
+        "capacity": "Capacity",
+        "availableDays": "Available Days",
+        "selectAvailableDays": "Select Available Days",
+        "headers": {
+            "floor": "Floor",
+            "code": "Classroom Code",
+            "capacity": "Capacity",
+            "availableDays": "Available Days",
+            "actions": "Actions"
+        }
+    },
+    "conflict": {
+        "firstDepartment": "First Department",
+        "secondDepartment": "Second Department",
+        "firstCourse": "First Course",
+        "secondCourse": "Second Course",
+        "selectFirstDepartment": "Select First Department",
+        "selectSecondDepartment": "Select Second Department",
+        "selectFirstCourse": "Select First Course",
+        "selectSecondCourse": "Select Second Course",
+        "headers": {
+            "firstDepartment": "First Department",
+            "secondDepartment": "Second Department",
+            "firstCourse": "First Course",
+            "secondCourse": "Second Course",
+            "actions": "Actions"
+        }
+    },
+    "course": {
+        "section": "Section",
+        "code": "Course Code",
+        "name": "Course Name",
+        "numStudents": "Number of Students",
+        "environment": "Course Environment",
+        "class": "Grade",
+        "department": "Department",
+        "lecturer": "Lecturer",
+        "departmentCode": "Department Code",
+        "headers": {
+            "section": "Section",
+            "code": "Course Code",
+            "name": "Course Name",
+            "numStudents": "Number of Students",
+            "environment": "Course Environment",
+            "class": "Grade",
+            "department": "Department",
+            "lecturer": "Lecturer",
+            "departmentCode": "Department Code",
+            "actions": "Actions"
+        }
+    },
+    "reserve": {
+        "department": "Department",
+        "selectDepartment": "Select Department",
+        "course": "Course",
+        "selectCourse": "Select Course",
+        "day": "Day",
+        "startingTime": "Starting Time",
+        "selectStartingTime": "Select Starting Time",
+        "headers": {
+            "department": "Department",
+            "course": "Course",
+            "day": "Day",
+            "startingTime": "Starting Time",
+            "actions": "Actions"
+        }
+    },
+    "split": {
+        "department": "Department",
+        "selectDepartment": "Select Department",
+        "course": "Course",
+        "selectCourse": "Select Course",
+        "duration": "Duration",
+        "selectDuration": "Select Duration",
+        "headers": {
+            "department": "Department",
+            "course": "Course",
+            "duration": "Duration",
+            "actions": "Actions"
+        }
+    },
+    "generate": {
+        "title": "Generate Schedule",
+        "numCourses": "Number of courses",
+        "numClassrooms": "Number of classrooms",
+        "numBusy": "Number of busy days",
+        "numConflict": "Number of additional conflicting courses",
+        "numSplit": "Number of courses to be split",
+        "numReserved": "Number of reserved courses"
+    },
+    "scheduler": {
+        "courseList": "CourseList",
+        "classrooms": "Classrooms",
+        "busyDays": "BusyDays",
+        "conflictingCourses": "Conflicting Courses",
+        "split": "Split",
+        "reserved": "Reserved",
+        "generate": "Generate"
+    },
+    "selector": {
+        "createdAt": "Created At",
+        "status": "Status",
+        "summary": "Summary"
     },
     "professor": {
         "department": "DEPARTMENT",
@@ -77,5 +130,23 @@
         "name": "COURSE CODE",
         "day": "DAY",
         "time": "TIME"
+    },
+    "button": {
+        "newSchedule": "New Schedule",
+        "add": "Add",
+        "upload": "Upload",
+        "addBusyDay": "Add Busy Day",
+        "addClassroom": "Add Busy Day",
+        "addConflict": "Add Conflict",
+        "addCourse": "Add Course",
+        "clearTable": "Clear Table",
+        "generate": "Generate",
+        "addReservedDay": "Add Reserved Day"
+    },
+    "feedback": {
+        "loading": "Loading...",
+        "search": "Search...",
+        "generating": "Please wait while your schedule is being created. This process may take a few minutes.",
+        "resStatus": "Server response code"
     }
 }

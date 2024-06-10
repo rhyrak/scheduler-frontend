@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function SearchDropdown({
   title,
@@ -11,6 +12,7 @@ function SearchDropdown({
   options: string[];
   setSelected: Function;
 }) {
+  const [t, i18n] = useTranslation("global");
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -28,7 +30,7 @@ function SearchDropdown({
         <ul className="absolute shadow-lg bg-white py-2 px-2 z-[1000] min-w-full w-max rounded max-h-96 overflow-auto">
           <li className="mb-2">
             <input
-              placeholder="Search..."
+              placeholder={t("feedback.search")}
               className="px-4 py-2.5 w-full rounded text-[#333] text-sm border-none outline-blue-600 bg-blue-50 focus:bg-transparent"
               value={search}
               onChange={(e) => {

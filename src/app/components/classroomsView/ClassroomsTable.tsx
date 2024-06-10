@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import DaysDropdown from "../DaysDropdown";
+import { useTranslation } from "react-i18next";
 
 function ClassroomsTable({
   headers,
@@ -118,6 +119,7 @@ function WriteRow({
   edit: Function;
   save: Function;
 }) {
+  const [t, i18n] = useTranslation("global");
   const [c, setClassroom] = useState<Classroom>({ ...Classroom });
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -168,7 +170,11 @@ function WriteRow({
         />
       </td>
       <td className="px-6 py-4">
-        <DaysDropdown title="Select Days" days={days} setDays={setDays} />
+        <DaysDropdown
+          title={t("classrooms.selectAvailableDays")}
+          days={days}
+          setDays={setDays}
+        />
       </td>
       <td className="pl-6 py-4 flex flex-row justify-start space-x-4">
         <FontAwesomeIcon

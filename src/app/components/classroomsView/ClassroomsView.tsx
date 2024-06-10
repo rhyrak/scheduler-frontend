@@ -8,16 +8,16 @@ import Modal from "../Modal";
 import { Repository } from "../../repository";
 import Papa from "papaparse";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function ClassroomsView() {
-  // floor_number	classroom_id	capacity	available_days
-
+  const [t, i18n] = useTranslation("global");
   const headers: string[] = [
-    "Floor",
-    "Classroom ID",
-    "Capacity",
-    "Available Days",
-    "Actions",
+    t("classrooms.headers.floor"),
+    t("classrooms.headers.code"),
+    t("classrooms.headers.capacity"),
+    t("classrooms.headers.availableDays"),
+    t("classrooms.headers.actions"),
   ];
 
   const [modalState, setModalState] = useState(false);
@@ -36,7 +36,7 @@ function ClassroomsView() {
       <div className="flex flex-row space-x-4 pl-4 mb-4 justify-start">
         <UploadButton handler={readFile} />
         <IconButton
-          text="Add Classroom"
+          text={t("button.addClassroom")}
           icon={faPlus}
           onClick={() => setModalState(true)}
         />

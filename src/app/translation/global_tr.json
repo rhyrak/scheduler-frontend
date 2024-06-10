@@ -1,81 +1,152 @@
 {
-    "home": {
-        "nav": {
-            "first": "Bütün Programlar",
-            "second": "Profesör Adları Eklenmiş Programlar",
-            "third": "Profesör Bazlı Programlar",
-            "fourth": "Sınıf Bazlı Programlar"
-        },
-        "selector": {
-            "classroom": "SINIFLAR",
-            "busy": "MEŞGUL GÜNLER",
-            "conflict": "EK ÇAKIŞAN DERSLER",
-            "split": "DERSİ BÖL",
-            "reserved": "REZERVE",
-            "course": "DERSLER"
-        },
-        "classroom": {
-            "header": "SINIF EKLEYİP ÇIKARABİLİRSİN",
-            "buttontext": "CSV Dosyası Yükle",
-            "first": "Kat Numarası",
-            "second": "Sınıf Kodu",
-            "third": "Kapasite",
-            "fourth": "Uygun Günler",
-            "form": {
-                "add": "EKLE",
-                "update": "KAYDET"
-            }
-        },
-        "busy": {
-            "header": "PROFESÖRLERİN MEŞGUL OLDUĞU GÜNLERİ BELİRTEBİLİRSİN",
-            "first": "Profesör Adı",
-            "second": "Meşgul Olduğu Gün",
-            "form": {
-                "first": "Profesör Adı",
-                "second": "Meşgul Olduğu Günü Seç"
-            }
-        },
-        "conflict": {
-            "header": "BİRBİRİ İLE ÇAKIŞMAYACAK DERSLERİ GİREBİLİRSİN",
-            "first": "Birinci Departman",
-            "second": "Birinci Ders",
-            "third": "İkinci Departman",
-            "fourth": "İkinci Ders"
-        },
-        "split": {
-            "header": "BİR DERSİ SAATLERE BÖLEBİLİRSİN",
-            "first": "Departman",
-            "second": "Ders Kodu",
-            "third": "Bölüm Süresi"
-        },
-        "reserved": {
-            "header": "BİR DERS İÇİN GÜN VE ZAMAN BELİRLEYEBİLİRSİN",
-            "first": "Departman",
-            "second": "Ders Kodu",
-            "third": "Ders Günü",
-            "fourth": "Başlama Vakti",
-            "form": {
-                "first": "Departman",
-                "second": "Ders Kodu",
-                "third": "Günü Seç",
-                "fourth": "Başlama Vakti Seç"
-            }
-        },
-        "course": {
-            "header": "DERS DOSYASINI SEÇİP PROGRAM OLUŞTURABİLİRSİN",
-            "label": "Dersler:",
-            "submit": "YÜKLE",
-            "p": "Program Oluşturuldu",
-            "view": "GÖRÜNTÜLE",
-            "create": "DERS PROGRAMI OLUŞTUR"
+    "nav": {
+        "all": "All Schedules",
+        "withNames": "All Schedules With Professor Names",
+        "professors": "Professor-Oriented Schedule",
+        "classrooms": "Classroom-Oriented Schedule"
+    },
+    "busy": {
+        "lecturer": "Lecturer",
+        "selectLecturer": "Select Lecturer",
+        "busyDay": "Busy Day",
+        "selectDay": "Select Day",
+        "headers": {
+            "lecturer": "Lecturer",
+            "busyDay": "Busy Day",
+            "actions": "Actions"
         }
     },
+    "classrooms": {
+        "floor": "Floor",
+        "code": "Classroom Code",
+        "capacity": "Capacity",
+        "availableDays": "Available Days",
+        "selectAvailableDays": "Select Available Days",
+        "headers": {
+            "floor": "Floor",
+            "code": "Classroom Code",
+            "capacity": "Capacity",
+            "availableDays": "Available Days",
+            "actions": "Actions"
+        }
+    },
+    "conflict": {
+        "firstDepartment": "First Department",
+        "secondDepartment": "Second Department",
+        "firstCourse": "First Course",
+        "secondCourse": "Second Course",
+        "selectFirstDepartment": "Select First Department",
+        "selectSecondDepartment": "Select Second Department",
+        "selectFirstCourse": "Select First Course",
+        "selectSecondCourse": "Select Second Course",
+        "headers": {
+            "firstDepartment": "First Department",
+            "secondDepartment": "Second Department",
+            "firstCourse": "First Course",
+            "secondCourse": "Second Course",
+            "actions": "Actions"
+        }
+    },
+    "course": {
+        "section": "Section",
+        "code": "Course Code",
+        "name": "Course Name",
+        "numStudents": "Number of Students",
+        "environment": "Course Environment",
+        "class": "Grade",
+        "department": "Department",
+        "lecturer": "Lecturer",
+        "departmentCode": "Department Code",
+        "headers": {
+            "section": "Section",
+            "code": "Course Code",
+            "name": "Course Name",
+            "numStudents": "Number of Students",
+            "environment": "Course Environment",
+            "class": "Grade",
+            "department": "Department",
+            "lecturer": "Lecturer",
+            "departmentCode": "Department Code",
+            "actions": "Actions"
+        }
+    },
+    "reserve": {
+        "department": "Department",
+        "selectDepartment": "Select Department",
+        "course": "Course",
+        "selectCourse": "Select Course",
+        "day": "Day",
+        "startingTime": "Starting Time",
+        "selectStartingTime": "Select Starting Time",
+        "headers": {
+            "department": "Department",
+            "course": "Course",
+            "day": "Day",
+            "startingTime": "Starting Time",
+            "actions": "Actions"
+        }
+    },
+    "split": {
+        "department": "Department",
+        "selectDepartment": "Select Department",
+        "course": "Course",
+        "selectCourse": "Select Course",
+        "duration": "Duration",
+        "selectDuration": "Select Duration",
+        "headers": {
+            "department": "Department",
+            "course": "Course",
+            "duration": "Duration",
+            "actions": "Actions"
+        }
+    },
+    "generate": {
+        "title": "Generate Schedule",
+        "numCourses": "Number of courses",
+        "numClassrooms": "Number of classrooms",
+        "numBusy": "Number of busy days",
+        "numConflict": "Number of additional conflicting courses",
+        "numSplit": "Number of courses to be split",
+        "numReserved": "Number of reserved courses"
+    },
+    "scheduler": {
+        "courseList": "CourseList",
+        "classrooms": "Classrooms",
+        "busyDays": "BusyDays",
+        "conflictingCourses": "Conflicting Courses",
+        "split": "Split",
+        "reserved": "Reserved",
+        "generate": "Generate"
+    },
+    "selector": {
+        "createdAt": "Created At",
+        "status": "Status",
+        "summary": "Summary"
+    },
     "professor": {
-        "department": "DEPARTMAN",
-        "room": "SINIF",
-        "prof": "PROFESÖR",
-        "name": "DERS KODU",
-        "day": "GÜN",
-        "time": "SAAT"
+        "department": "DEPARTMENT",
+        "room": "ROOM",
+        "prof": "PROFESSOR",
+        "name": "COURSE CODE",
+        "day": "DAY",
+        "time": "TIME"
+    },
+    "button": {
+        "newSchedule": "New Schedule",
+        "add": "Add",
+        "upload": "Upload",
+        "addBusyDay": "Add Busy Day",
+        "addClassroom": "Add Busy Day",
+        "addConflict": "Add Conflict",
+        "addCourse": "Add Course",
+        "clearTable": "Clear Table",
+        "generate": "Generate",
+        "addReservedDay": "Add Reserved Day"
+    },
+    "feedback": {
+        "loading": "Loading...",
+        "search": "Search...",
+        "generating": "Please wait while your schedule is being created. This process may take a few minutes.",
+        "resStatus": "Server response code"
     }
 }

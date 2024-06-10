@@ -5,8 +5,10 @@ import ListTable from "@/app/components/ListTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { useReactToPrint } from "react-to-print";
+import { useTranslation } from "react-i18next";
 
 export default function Page() {
+  const [t, i18n] = useTranslation("global");
   const [csvContent, setCsvContent] = useState("");
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
@@ -18,7 +20,7 @@ export default function Page() {
   });
 
   useEffect(() => {
-    fetch(process.env.SERVER_ENDPOINT + "/" + id)
+    fetch(process.env.NEXT_PUBLIC_SERVER_ENDPOINT + "/" + id)
       .then((res) => res.json())
       .catch(() => {
         setLoading(false);
@@ -32,8 +34,13 @@ export default function Page() {
       .catch(() => {});
   }, [id]);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (!data) return <p>{id + " "}Not found</p>;
+  if (isLoading) return <p>{t("feedback.loading")}</p>;
+  if (!data)
+    return (
+      <h3 className="m-auto text-center mt-4 text-lg">
+        {t("feedback.generating")}
+      </h3>
+    );
 
   const rooms = new Map<string, string>();
 

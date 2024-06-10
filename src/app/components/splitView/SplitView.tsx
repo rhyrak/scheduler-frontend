@@ -8,9 +8,16 @@ import Modal from "../Modal";
 import { Repository } from "../../repository";
 import Papa from "papaparse";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function SplitView() {
-  const headers: string[] = ["Department", "Course", "Duration", "Actions"];
+  const [t, i18n] = useTranslation("global");
+  const headers: string[] = [
+    t("split.headers.department"),
+    t("split.headers.course"),
+    t("split.headers.duration"),
+    t("split.headers.actions"),
+  ];
 
   const [modalState, setModalState] = useState(false);
   const [split, _setSplit] = useState<Split[]>([]);

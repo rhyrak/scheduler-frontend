@@ -3,8 +3,10 @@ import { Reserved } from "../../models";
 import { Repository } from "@/app/repository";
 import SearchDropdown from "../SearchDropdown";
 import Dropdown from "../Dropdown";
+import { useTranslation } from "react-i18next";
 
 const AddReservedForm = ({ handler }: { handler: Function }) => {
+  const [t, i18n] = useTranslation("global");
   const [reserved, setReserved] = useState<Reserved>({
     Department: "",
     Course_Code: "",
@@ -24,11 +26,12 @@ const AddReservedForm = ({ handler }: { handler: Function }) => {
         name="Department"
         value={reserved.Department}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Department"
+        placeholder={t("reserve.department")}
         disabled
       />
       <SearchDropdown
-        title="Select Department"
+        title={t("reserve.selectDepartment")}
+        openTitle={t("reserve.selectDepartment")}
         options={Repository.GetDepartments()}
         setSelected={(s: string) => {
           setReserved({ ...reserved, Department: s });
@@ -39,11 +42,12 @@ const AddReservedForm = ({ handler }: { handler: Function }) => {
         name="Course_Code"
         value={reserved.Course_Code}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Course"
+        placeholder={t("reserve.course")}
         disabled
       />
       <SearchDropdown
-        title="Select Course"
+        title={t("reserve.selectCourse")}
+        openTitle={t("reserve.selectCourse")}
         options={Repository.GetCourseCodes(reserved.Department)}
         setSelected={(s: string) => {
           setReserved({ ...reserved, Course_Code: s });
@@ -54,11 +58,12 @@ const AddReservedForm = ({ handler }: { handler: Function }) => {
         name="Day"
         value={reserved.Day}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Select Day"
+        placeholder={t("reserve.day")}
         disabled
       />
       <Dropdown
-        title="Day"
+        title={t("reserve.day")}
+        openTitle={t("reserve.day")}
         options={["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]}
         setSelected={(s: string) => {
           setReserved({ ...reserved, Day: s });
@@ -69,11 +74,12 @@ const AddReservedForm = ({ handler }: { handler: Function }) => {
         name="Starting_Time"
         value={reserved.Starting_Time}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Select Starting Time"
+        placeholder={t("reserve.startingTime")}
         disabled
       />
       <Dropdown
-        title="Starting Time"
+        title={t("reserve.selectStartingTime")}
+        openTitle={t("reserve.selectStartingTime")}
         options={[
           "08:30",
           "09:30",
@@ -94,7 +100,7 @@ const AddReservedForm = ({ handler }: { handler: Function }) => {
         type="submit"
         className="px-6 py-3 !mt-8 w-full font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-full"
       >
-        Add
+        {t("button.add")}
       </button>
     </form>
   );

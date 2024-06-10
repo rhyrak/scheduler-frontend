@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect, Fragment } from "react";
 import Modal from "./Modal";
 import { ScheduleMeta } from "../models";
+import { useTranslation } from "react-i18next";
 
 const ScheduleSelector = ({
   api,
@@ -13,6 +14,7 @@ const ScheduleSelector = ({
   api: string;
   hrefBase: string;
 }) => {
+  const [t, i18n] = useTranslation("global");
   const [modalState, setModalState] = useState<boolean>(false);
   const [modalText, setModalText] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
@@ -33,10 +35,14 @@ const ScheduleSelector = ({
       <h2 className="font-bold text-xl text-center mb-4">Schedules</h2>
       <ul className="border border-slate-500">
         {loading ? (
-          <li>Loading...</li>
+          <li>{t("feedback.loading")}</li>
         ) : (
           <SchedulesTable
-            headers={["Created At", "Status", "Summary"]}
+            headers={[
+              t("selector.createdAt"),
+              t("selector.status"),
+              t("selector.summary"),
+            ]}
             schedules={schedules}
             hrefBase={hrefBase}
             setModalState={setModalState}

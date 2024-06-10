@@ -1,10 +1,12 @@
 import { FormEventHandler } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function UploadButton({
   handler,
 }: {
   handler: FormEventHandler<HTMLInputElement>;
 }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <label
       htmlFor="uploadFile"
@@ -24,7 +26,7 @@ export default function UploadButton({
           data-original="#000000"
         />
       </svg>
-      Upload
+      {t("button.upload")}
       <input
         type="file"
         id="uploadFile"

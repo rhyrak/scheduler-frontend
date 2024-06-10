@@ -8,9 +8,15 @@ import Modal from "../Modal";
 import { Repository } from "../../repository";
 import Papa from "papaparse";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function BusyView() {
-  const headers: string[] = ["Lecturer", "Busy Day", "Actions"];
+  const [t, i18n] = useTranslation("global");
+  const headers: string[] = [
+    t("busy.headers.lecturer"),
+    t("busy.headers.busyDay"),
+    t("busy.headers.actions"),
+  ];
 
   const [modalState, setModalState] = useState(false);
   const [busy, _setBusy] = useState<Busy[]>([]);
@@ -28,7 +34,7 @@ function BusyView() {
       <div className="flex flex-row space-x-4 pl-4 mb-4 justify-start">
         <UploadButton handler={readFile} />
         <IconButton
-          text="Add Busy Day"
+          text={t("button.addBusyDay")}
           icon={faPlus}
           onClick={() => setModalState(true)}
         />

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Conflict } from "../../models";
 import { Repository } from "@/app/repository";
 import SearchDropdown from "../SearchDropdown";
+import { useTranslation } from "react-i18next";
 
 const AddConflictForm = ({ handler }: { handler: Function }) => {
+  const [t, i18n] = useTranslation("global");
   const [conflict, setConflict] = useState<Conflict>({
     Department1: "",
     Course_Code1: "",
@@ -23,11 +25,12 @@ const AddConflictForm = ({ handler }: { handler: Function }) => {
         name="Department1"
         value={conflict.Department1}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="First Department"
+        placeholder={t("conflict.firstDepartment")}
         disabled
       />
       <SearchDropdown
-        title="Select First Department"
+        title={t("conflict.selectFirstDepartment")}
+        openTitle={t("conflict.selectFirstDepartment")}
         options={Repository.GetDepartments()}
         setSelected={(s: string) => {
           setConflict({ ...conflict, Department1: s });
@@ -38,11 +41,12 @@ const AddConflictForm = ({ handler }: { handler: Function }) => {
         name="Course_Code1"
         value={conflict.Course_Code1}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="First Course"
+        placeholder={t("conflict.firstCourse")}
         disabled
       />
       <SearchDropdown
-        title="Select First Course"
+        title={t("conflict.selectFirstCourse")}
+        openTitle={t("conflict.selectFirstCourse")}
         options={Repository.GetCourseCodes(conflict.Department1)}
         setSelected={(s: string) => {
           setConflict({ ...conflict, Course_Code1: s });
@@ -53,11 +57,12 @@ const AddConflictForm = ({ handler }: { handler: Function }) => {
         name="Department2"
         value={conflict.Department2}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Select Second Department"
+        placeholder={t("conflict.secondDepartment")}
         disabled
       />
       <SearchDropdown
-        title="Second Department"
+        title={t("conflict.selectSecondDepartment")}
+        openTitle={t("conflict.selectSecondDepartment")}
         options={Repository.GetDepartments()}
         setSelected={(s: string) => {
           setConflict({ ...conflict, Department2: s });
@@ -68,11 +73,12 @@ const AddConflictForm = ({ handler }: { handler: Function }) => {
         name="Course_Code2"
         value={conflict.Course_Code2}
         className="px-4 py-2 text-base rounded-md bg-white border border-gray-400 w-full outline-blue-500"
-        placeholder="Second Course"
+        placeholder={t("conflict.secondCourse")}
         disabled
       />
       <SearchDropdown
-        title="Select Second Course"
+        title={t("conflict.selectSecondCourse")}
+        openTitle={t("conflict.selectSecondCourse")}
         options={Repository.GetCourseCodes(conflict.Department2)}
         setSelected={(s: string) => {
           setConflict({ ...conflict, Course_Code2: s });
@@ -82,7 +88,7 @@ const AddConflictForm = ({ handler }: { handler: Function }) => {
         type="submit"
         className="px-6 py-3 !mt-8 w-full font-semibold bg-blue-600 hover:bg-blue-700 text-white rounded-full"
       >
-        Add
+        {t("button.add")}
       </button>
     </form>
   );

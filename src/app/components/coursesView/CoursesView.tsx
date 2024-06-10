@@ -8,21 +8,23 @@ import Modal from "../Modal";
 import { Repository } from "../../repository";
 import Papa from "papaparse";
 import { faCross, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function CoursesView() {
+  const [t, i18n] = useTranslation("global");
   const headers: string[] = [
-    "Section",
-    "Course Code",
-    "Course Name",
-    "Number of Students",
-    "Course Environment",
+    t("course.headers.section"),
+    t("course.headers.code"),
+    t("course.headers.name"),
+    t("course.headers.numStudents"),
+    t("course.headers.environment"),
     "T+U",
     "AKTS",
-    "Class",
-    "Department",
-    "Lecturer",
-    "Department Code",
-    "Actions",
+    t("course.headers.class"),
+    t("course.headers.department"),
+    t("course.headers.lecturer"),
+    t("course.headers.departmentCode"),
+    t("course.headers.actions"),
   ];
 
   const [modalState, setModalState] = useState(false);
@@ -42,14 +44,14 @@ function CoursesView() {
         <div className="flex flex-row space-x-4 pl-4">
           <UploadButton handler={readFile} />
           <IconButton
-            text="Add Course"
+            text={t("button.addCourse")}
             icon={faPlus}
             onClick={() => setModalState(true)}
           />
         </div>
         <div className="pr-4">
           <IconButton
-            text="Clear Table"
+            text={t("button.clearTable")}
             icon={faTrash}
             onClick={() => {
               Repository.SetCourses([]);

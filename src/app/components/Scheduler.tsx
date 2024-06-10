@@ -10,8 +10,10 @@ import ConflictView from "./conflictView/ConflictView";
 import SplitView from "./splitView/SplitView";
 import ReserveView from "./reserveView/ReserveView";
 import GenerateView from "./generateView/GenerateView";
+import { useTranslation } from "react-i18next";
 
 export default function Scheduler() {
+  const [t, i18n] = useTranslation("global");
   const [currentStep, _setCurrentStep] = useState(1);
   const setCurrentStep = (step: number) => {
     Repository.SetStep(step);
@@ -23,13 +25,13 @@ export default function Scheduler() {
   }, []);
 
   const steps: Step[] = [
-    { index: 1, title: "Course List", details: "" },
-    { index: 2, title: "Classrooms", details: "" },
-    { index: 3, title: "Busy Days", details: "" },
-    { index: 4, title: "Conflicting Courses", details: "" },
-    { index: 5, title: "Split", details: "" },
-    { index: 6, title: "Reserved", details: "" },
-    { index: 7, title: "Generate", details: "" },
+    { index: 1, title: t("scheduler.courseList"), details: "" },
+    { index: 2, title: t("scheduler.classrooms"), details: "" },
+    { index: 3, title: t("scheduler.busyDays"), details: "" },
+    { index: 4, title: t("scheduler.conflictingCourses"), details: "" },
+    { index: 5, title: t("scheduler.split"), details: "" },
+    { index: 6, title: t("scheduler.reserved"), details: "" },
+    { index: 7, title: t("scheduler.generate"), details: "" },
   ];
   const views = [
     <CoursesView key={steps[0].title} />,

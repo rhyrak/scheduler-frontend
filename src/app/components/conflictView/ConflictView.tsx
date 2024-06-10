@@ -8,14 +8,16 @@ import Modal from "../Modal";
 import { Repository } from "../../repository";
 import Papa from "papaparse";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 function ConflictView() {
+  const [t, i18n] = useTranslation("global");
   const headers: string[] = [
-    "First Department",
-    "First Course",
-    "Second Department",
-    "Second Course",
-    "Actions",
+    t("conflict.headers.firstDepartment"),
+    t("conflict.headers.secondDepartment"),
+    t("conflict.headers.firstCourse"),
+    t("conflict.headers.secondCourse"),
+    t("conflict.headers.actions"),
   ];
 
   const [modalState, setModalState] = useState(false);
@@ -34,7 +36,7 @@ function ConflictView() {
       <div className="flex flex-row space-x-4 pl-4 mb-4 justify-start">
         <UploadButton handler={readFile} />
         <IconButton
-          text="Add Conflict"
+          text={t("button.addConflict")}
           icon={faPlus}
           onClick={() => setModalState(true)}
         />

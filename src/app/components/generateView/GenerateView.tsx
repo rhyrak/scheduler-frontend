@@ -1,8 +1,10 @@
 import { Repository } from "@/app/repository";
 import Papa from "papaparse";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function GenerateView() {
+  const [t, i18n] = useTranslation("global");
   const courses = Repository.GetCourses();
   const busy = Repository.GetBusy();
   const classroom = Repository.GetClassrooms();
@@ -16,20 +18,26 @@ function GenerateView() {
     <div className="w-full">
       <div className="w-full mt-12 mx-auto max-w-lg bg-white shadow-lg rounded-md p-6 relative">
         <div className="flex items-center pb-3 border-b text-black">
-          <h3 className="text-xl font-bold flex-1">Generate Schedule</h3>
+          <h3 className="text-xl font-bold flex-1">{t("generate.title")}</h3>
         </div>
         <div className="my-6">
-          <p className="text-m">Number of courses: {courses.length}</p>
-          <p className="text-m">Number of classrooms: {classroom.length}</p>
-          <p className="text-m">Number of busy days: {busy.length}</p>
           <p className="text-m">
-            Number of additional conflicting courses: {conflict.length}
+            {t("generate.numCourses")}: {courses.length}
           </p>
           <p className="text-m">
-            Number of courses to be split: {split.length}
+            {t("generate.numClassrooms")}: {classroom.length}
           </p>
           <p className="text-m">
-            Number of reserved courses: {reserved.length}
+            {t("generate.numBusy")}: {busy.length}
+          </p>
+          <p className="text-m">
+            {t("generate.numConflict")}: {conflict.length}
+          </p>
+          <p className="text-m">
+            {t("generate.numSplit")}: {split.length}
+          </p>
+          <p className="text-m">
+            {t("generate.numReserved")}: {reserved.length}
           </p>
         </div>
         <div className="border-t flex justify-end pt-6 space-x-4">
@@ -38,13 +46,16 @@ function GenerateView() {
             className="px-6 py-2 rounded-md w-full text-white text-m border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
             onClick={() => handleGenerate(setResponse)}
           >
-            Generate
+            {t("button.generate")}
           </button>
         </div>
         {response !== undefined && typeof response == typeof new Response() && (
           <>
             <hr className="my-2 invisible" />
-            <p>Server response status:{(response as Response).status}</p>
+            <p>
+              Server response status: {(response as Response).status}
+              {(response as Response).ok && " OK!"}
+            </p>
           </>
         )}
         {response !== undefined && typeof response === "string" && (

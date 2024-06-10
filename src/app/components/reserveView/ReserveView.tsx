@@ -8,14 +8,16 @@ import { Repository } from "../../repository";
 import Papa from "papaparse";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import ReservedTable from "./ReservedTable";
+import { useTranslation } from "react-i18next";
 
 function ReserveView() {
+  const [t, i18n] = useTranslation("global");
   const headers: string[] = [
-    "Department",
-    "Course",
-    "Day",
-    "Starting Time",
-    "Actions",
+    t("reserve.generate.department"),
+    t("reserve.generate.course"),
+    t("reserve.generate.day"),
+    t("reserve.generate.startingTime"),
+    t("reserve.generate.actions"),
   ];
 
   const [modalState, setModalState] = useState(false);
@@ -34,7 +36,7 @@ function ReserveView() {
       <div className="flex flex-row space-x-4 pl-4 mb-4 justify-start">
         <UploadButton handler={readFile} />
         <IconButton
-          text="Add Reserved Day"
+          text={t("button.addReservedDay")}
           icon={faPlus}
           onClick={() => setModalState(true)}
         />

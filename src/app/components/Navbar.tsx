@@ -48,7 +48,7 @@ export default function Navbar() {
                   pathname.startsWith("/regular") ? activeLink : regularLink
                 }
               >
-                {t("home.nav.first")}
+                {t("home.nav.all")}
               </a>
             </li>
             <li>
@@ -58,7 +58,7 @@ export default function Navbar() {
                   pathname.startsWith("/withnames") ? activeLink : regularLink
                 }
               >
-                {t("home.nav.second")}
+                {t("home.nav.withNames")}
               </a>
             </li>
             <li>
@@ -68,7 +68,7 @@ export default function Navbar() {
                   pathname.startsWith("/professor") ? activeLink : regularLink
                 }
               >
-                {t("home.nav.third")}
+                {t("home.nav.professors")}
               </a>
             </li>
             <li>
@@ -78,7 +78,7 @@ export default function Navbar() {
                   pathname.startsWith("/classes") ? activeLink : regularLink
                 }
               >
-                {t("home.nav.fourth")}
+                {t("home.nav.classrooms")}
               </a>
             </li>
           </ul>

@@ -5,7 +5,7 @@ export default function Classes() {
     <main>
       <div className="flex justify-around pt-16">
         <ScheduleSelector
-          api={process.env.SERVER_ENDPOINT as string}
+          api={process.env.NEXT_PUBLIC_SERVER_ENDPOINT as string}
           hrefBase="/classes/"
         />
       </div>
