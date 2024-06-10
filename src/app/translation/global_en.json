@@ -1,0 +1,81 @@
+{
+    "home": {
+        "nav": {
+            "first": "All Schedules",
+            "second": "All Schedules With Professor Names",
+            "third": "Professor-Oriented Schedule",
+            "fourth": "Classroom-Oriented Schedule"
+        },
+        "selector": {
+            "classroom": "CLASSROOM",
+            "busy": "BUSY",
+            "conflict": "CONFLICT",
+            "split": "SPLIT",
+            "reserved": "RESERVED",
+            "course": "COURSE"
+        },
+        "classroom": {
+            "header": "YOU CAN ADD OR REMOVE CLASSROOMS",
+            "buttontext": "Upload CSV File",
+            "first": "Floor Number",
+            "second": "Classroom ID",
+            "third": "Capacity",
+            "fourth": "Available Days",
+            "form": {
+                "add": "ADD",
+                "update": "UPDATE"
+            }
+        },
+        "busy": {
+            "header": "ENTER A BUSY TIME FOR A PROFESSOR",
+            "first": "Professor Name",
+            "second": "Busy Day",
+            "form": {
+                "first": "Professor Name",
+                "second": "Select Busy Time"
+            }
+        },
+        "conflict": {
+            "header": "EXPLICITLY SPECIFY COURSES THAT CONFLICT WITH EACH OTHER",
+            "first": "First Department",
+            "second": "First Course",
+            "third": "Second Department",
+            "fourth": "Second Course"
+        },
+        "split": {
+            "header": "SPLIT HOURS OF A COURSE INTO TWO PARTS",
+            "first": "Department",
+            "second": "Course Code",
+            "third": "Half Duration"
+        },
+        "reserved": {
+            "header": "RESERVE TIME FOR A SPECIFIC COURSE",
+            "first": "Department",
+            "second": "Course Code",
+            "third": "Course Day",
+            "fourth": "Starting Time",
+            "form": {
+                "first": "Department",
+                "second": "Course Code",
+                "third": "Select Day",
+                "fourth": "Select Starting Time"
+            }
+        },
+        "course": {
+            "header": "YOU CAN SELECT COURSES FILE AND GENERATE A SCHEDULE",
+            "label": "Courses:",
+            "submit": "SUBMIT",
+            "p": "Schedule created",
+            "view": "VIEW",
+            "create": "GENERATE SCHEDULE"
+        }
+    },
+    "professor": {
+        "department": "DEPARTMENT",
+        "room": "ROOM",
+        "prof": "PROFESSOR",
+        "name": "COURSE CODE",
+        "day": "DAY",
+        "time": "TIME"
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "home": {
+        "nav": {
+            "first": "Bütün Programlar",
+            "second": "Profesör Adları Eklenmiş Programlar",
+            "third": "Profesör Bazlı Programlar",
+            "fourth": "Sınıf Bazlı Programlar"
+        },
+        "selector": {
+            "classroom": "SINIFLAR",
+            "busy": "MEŞGUL GÜNLER",
+            "conflict": "EK ÇAKIŞAN DERSLER",
+            "split": "DERSİ BÖL",
+            "reserved": "REZERVE",
+            "course": "DERSLER"
+        },
+        "classroom": {
+            "header": "SINIF EKLEYİP ÇIKARABİLİRSİN",
+            "buttontext": "CSV Dosyası Yükle",
+            "first": "Kat Numarası",
+            "second": "Sınıf Kodu",
+            "third": "Kapasite",
+            "fourth": "Uygun Günler",
+            "form": {
+                "add": "EKLE",
+                "update": "KAYDET"
+            }
+        },
+        "busy": {
+            "header": "PROFESÖRLERİN MEŞGUL OLDUĞU GÜNLERİ BELİRTEBİLİRSİN",
+            "first": "Profesör Adı",
+            "second": "Meşgul Olduğu Gün",
+            "form": {
+                "first": "Profesör Adı",
+                "second": "Meşgul Olduğu Günü Seç"
+            }
+        },
+        "conflict": {
+            "header": "BİRBİRİ İLE ÇAKIŞMAYACAK DERSLERİ GİREBİLİRSİN",
+            "first": "Birinci Departman",
+            "second": "Birinci Ders",
+            "third": "İkinci Departman",
+            "fourth": "İkinci Ders"
+        },
+        "split": {
+            "header": "BİR DERSİ SAATLERE BÖLEBİLİRSİN",
+            "first": "Departman",
+            "second": "Ders Kodu",
+            "third": "Bölüm Süresi"
+        },
+        "reserved": {
+            "header": "BİR DERS İÇİN GÜN VE ZAMAN BELİRLEYEBİLİRSİN",
+            "first": "Departman",
+            "second": "Ders Kodu",
+            "third": "Ders Günü",
+            "fourth": "Başlama Vakti",
+            "form": {
+                "first": "Departman",
+                "second": "Ders Kodu",
+                "third": "Günü Seç",
+                "fourth": "Başlama Vakti Seç"
+            }
+        },
+        "course": {
+            "header": "DERS DOSYASINI SEÇİP PROGRAM OLUŞTURABİLİRSİN",
+            "label": "Dersler:",
+            "submit": "YÜKLE",
+            "p": "Program Oluşturuldu",
+            "view": "GÖRÜNTÜLE",
+            "create": "DERS PROGRAMI OLUŞTUR"
+        }
+    },
+    "professor": {
+        "department": "DEPARTMAN",
+        "room": "SINIF",
+        "prof": "PROFESÖR",
+        "name": "DERS KODU",
+        "day": "GÜN",
+        "time": "SAAT"
+    }
+}
