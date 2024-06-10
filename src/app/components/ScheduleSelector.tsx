@@ -2,7 +2,7 @@
 
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import Modal from "./Modal";
 import { ScheduleMeta } from "../models";
 
@@ -18,9 +18,6 @@ const ScheduleSelector = ({
   const [loading, setLoading] = useState<boolean>(true);
   const [schedules, setSchedules] = useState<ScheduleMeta[]>([]);
   useEffect(() => {
-    setModalText(
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quidem. Nostrum explicabo, reiciendis itaque voluptatibus non hic ducimus maxime recusandae perspiciatis debitis, est numquam impedit odio labore magnam omnis? Esse at necessitatibus, voluptatibus tenetur quae dolorum ut a commodi hic dolore quam reiciendis inventore nobis asperiores dolores, doloremque eum eius?"
-    );
     fetch(api)
       .then((res) => res.json())
       .catch(() => {})
@@ -49,11 +46,22 @@ const ScheduleSelector = ({
       </ul>
       {modalState && (
         <Modal
+          isWide={true}
           close={() => {
             setModalState(false);
           }}
         >
-          <p className="my-8">{modalText}</p>
+          <div className="my-8">
+            {modalText
+              .trim()
+              .split("\n")
+              .map((para, i) => (
+                <Fragment key={i}>
+                  <p>{para}</p>
+                  {para.length == 0 && <hr className="my-2" />}
+                </Fragment>
+              ))}
+          </div>
         </Modal>
       )}
     </div>
