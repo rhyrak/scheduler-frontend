@@ -29,7 +29,7 @@ export default function RootLayout({
   useEffect(() => {
     const lang = localStorage.getItem("lang_code");
     if (lang == "en" || lang == "tr") i18next.changeLanguage(lang);
-  });
+  }, []);
   return (
     <html>
       <head>

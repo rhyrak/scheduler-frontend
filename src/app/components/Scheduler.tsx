@@ -20,7 +20,7 @@ export default function Scheduler() {
 
   useEffect(() => {
     _setCurrentStep(Repository.GetStep());
-  });
+  }, []);
 
   const steps: Step[] = [
     { index: 1, title: "Course List", details: "" },
@@ -32,13 +32,13 @@ export default function Scheduler() {
     { index: 7, title: "Generate", details: "" },
   ];
   const views = [
-    <CoursesView />,
-    <ClassroomsView />,
-    <BusyView />,
-    <ConflictView />,
-    <SplitView />,
-    <ReserveView />,
-    <GenerateView />,
+    <CoursesView key={steps[0].title} />,
+    <ClassroomsView key={steps[1].title} />,
+    <BusyView key={steps[2].title} />,
+    <ConflictView key={steps[3].title} />,
+    <SplitView key={steps[4].title} />,
+    <ReserveView key={steps[5].title} />,
+    <GenerateView key={steps[6].title} />,
   ];
   return (
     <div>
