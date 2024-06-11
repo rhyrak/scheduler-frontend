@@ -13,11 +13,11 @@ import { useTranslation } from "react-i18next";
 function ReserveView() {
   const [t, i18n] = useTranslation("global");
   const headers: string[] = [
-    t("reserve.generate.department"),
-    t("reserve.generate.course"),
-    t("reserve.generate.day"),
-    t("reserve.generate.startingTime"),
-    t("reserve.generate.actions"),
+    t("reserve.headers.department"),
+    t("reserve.headers.course"),
+    t("reserve.headers.day"),
+    t("reserve.headers.startingTime"),
+    t("reserve.headers.actions"),
   ];
 
   const [modalState, setModalState] = useState(false);

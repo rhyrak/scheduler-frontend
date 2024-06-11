@@ -1,127 +1,128 @@
 {
     "nav": {
-        "all": "All Schedules",
-        "withNames": "All Schedules With Professor Names",
-        "professors": "Professor-Oriented Schedule",
-        "classrooms": "Classroom-Oriented Schedule"
+        "all": "Ders Programları",
+        "withNames": "Profesör Adları Eklenmiş Programlar",
+        "professors": "Profesör Bazlı Programlar",
+        "classrooms": "Sınıf Bazlı Programlar"
     },
     "busy": {
-        "lecturer": "Lecturer",
-        "selectLecturer": "Select Lecturer",
-        "busyDay": "Busy Day",
-        "selectDay": "Select Day",
+        "lecturer": "Profesörün Adı",
+        "selectLecturer": "Profesör Seç",
+        "busyDay": "Meşgul Olduğu Gün",
+        "selectDay": "Gün Seç",
         "headers": {
-            "lecturer": "Lecturer",
-            "busyDay": "Busy Day",
-            "actions": "Actions"
+            "lecturer": "Profesör",
+            "busyDay": "Meşgul Gün",
+            "actions": "İşlemler"
         }
     },
     "classrooms": {
-        "floor": "Floor",
-        "code": "Classroom Code",
-        "capacity": "Capacity",
-        "availableDays": "Available Days",
-        "selectAvailableDays": "Select Available Days",
+        "floor": "Kat",
+        "code": "Sınıf Kodu",
+        "capacity": "Sınıf Kapasitesi",
+        "availableDays": "Uygun Günler",
+        "selectAvailableDays": "Uygun Günleri Seç",
         "headers": {
-            "floor": "Floor",
-            "code": "Classroom Code",
-            "capacity": "Capacity",
-            "availableDays": "Available Days",
-            "actions": "Actions"
+            "floor": "Kat",
+            "code": "Sınıf Kodu",
+            "capacity": "Kapasite",
+            "availableDays": "Uygun Günler",
+            "actions": "İşlemler"
         }
     },
     "conflict": {
-        "firstDepartment": "First Department",
-        "secondDepartment": "Second Department",
-        "firstCourse": "First Course",
-        "secondCourse": "Second Course",
-        "selectFirstDepartment": "Select First Department",
-        "selectSecondDepartment": "Select Second Department",
-        "selectFirstCourse": "Select First Course",
-        "selectSecondCourse": "Select Second Course",
+        "firstDepartment": "Birinci Bölüm",
+        "secondDepartment": "İkinci Bölüm",
+        "firstCourse": "Birinci Ders",
+        "secondCourse": "İkinci Ders",
+        "selectFirstDepartment": "Birinci Bölümü Seç",
+        "selectSecondDepartment": "İkinci Bölümü Seç",
+        "selectFirstCourse": "Birinci Dersi Seç",
+        "selectSecondCourse": "İkinci Dersi Seç",
         "headers": {
-            "firstDepartment": "First Department",
-            "secondDepartment": "Second Department",
-            "firstCourse": "First Course",
-            "secondCourse": "Second Course",
-            "actions": "Actions"
+            "firstDepartment": "Birinci Bölüm",
+            "secondDepartment": "İkinci Bölüm",
+            "firstCourse": "Birinci Ders",
+            "secondCourse": "İkinci Ders",
+            "actions": "İşlemler"
         }
     },
     "course": {
-        "section": "Section",
-        "code": "Course Code",
-        "name": "Course Name",
-        "numStudents": "Number of Students",
-        "environment": "Course Environment",
-        "class": "Grade",
-        "department": "Department",
-        "lecturer": "Lecturer",
-        "departmentCode": "Department Code",
+        "section": "Şube",
+        "code": "Ders Kodu",
+        "name": "Dersin Adı",
+        "numStudents": "Öğrenci Sayısı",
+        "environment": "Ders ortamı",
+        "class": "Sınıf",
+        "department": "Bölüm",
+        "lecturer": "Profesör",
+        "departmentCode": "Bölüm Kodu",
         "headers": {
-            "section": "Section",
-            "code": "Course Code",
-            "name": "Course Name",
-            "numStudents": "Number of Students",
-            "environment": "Course Environment",
-            "class": "Grade",
-            "department": "Department",
-            "lecturer": "Lecturer",
-            "departmentCode": "Department Code",
-            "actions": "Actions"
+            "section": "Şube",
+            "code": "Ders Kodu",
+            "name": "Dersin Adı",
+            "numStudents": "Öğrenci Sayısı",
+            "environment": "Ders ortamı",
+            "class": "Sınıf",
+            "department": "Bölüm",
+            "lecturer": "Profesör",
+            "departmentCode": "Bölüm Kodu",
+            "actions": "İşlemler"
         }
     },
     "reserve": {
-        "department": "Department",
-        "selectDepartment": "Select Department",
-        "course": "Course",
-        "selectCourse": "Select Course",
-        "day": "Day",
-        "startingTime": "Starting Time",
-        "selectStartingTime": "Select Starting Time",
+        "department": "Bölüm",
+        "selectDepartment": "Bölüm Seç",
+        "course": "Ders",
+        "selectCourse": "Ders Seç",
+        "day": "Gün",
+        "startingTime": "Başlangıç Saati",
+        "selectStartingTime": "Başlangıç Saatini Seç",
         "headers": {
-            "department": "Department",
-            "course": "Course",
-            "day": "Day",
-            "startingTime": "Starting Time",
-            "actions": "Actions"
+            "department": "Bölüm",
+            "course": "Ders",
+            "day": "Gün",
+            "startingTime": "Başlangıç Saati",
+            "actions": "İşlemler"
         }
     },
     "split": {
-        "department": "Department",
-        "selectDepartment": "Select Department",
-        "course": "Course",
-        "selectCourse": "Select Course",
-        "duration": "Duration",
-        "selectDuration": "Select Duration",
+        "department": "Bölüm",
+        "selectDepartment": "Bölüm Seç",
+        "course": "Ders",
+        "selectCourse": "Ders Seç",
+        "duration": "Süre",
+        "selectDuration": "Süre Seç",
         "headers": {
-            "department": "Department",
-            "course": "Course",
-            "duration": "Duration",
-            "actions": "Actions"
+            "department": "Bölüm",
+            "course": "Ders",
+            "duration": "Süre",
+            "actions": "İşlemler"
         }
     },
     "generate": {
-        "title": "Generate Schedule",
-        "numCourses": "Number of courses",
-        "numClassrooms": "Number of classrooms",
-        "numBusy": "Number of busy days",
-        "numConflict": "Number of additional conflicting courses",
-        "numSplit": "Number of courses to be split",
-        "numReserved": "Number of reserved courses"
+        "title": "Program Oluştur",
+        "numCourses": "Ders sayısı",
+        "numClassrooms": "Sınıf sayısı",
+        "numBusy": "Meşgul gün sayısı",
+        "numConflict": "Ek çakışma sayısı",
+        "numSplit": "Ayrılacak ders sayısı",
+        "numReserved": "Rezerve ders sayısı"
     },
     "scheduler": {
-        "courseList": "CourseList",
-        "classrooms": "Classrooms",
-        "busyDays": "BusyDays",
-        "conflictingCourses": "Conflicting Courses",
-        "split": "Split",
-        "reserved": "Reserved",
-        "generate": "Generate"
+        "courseList": "Dersler",
+        "classrooms": "Sınıflar",
+        "busyDays": "Meşgul Günler",
+        "conflictingCourses": "Ek Çakışan Dersler",
+        "split": "Ders Ayırma",
+        "reserved": "Rezerve",
+        "generate": "Oluştur"
     },
     "selector": {
-        "createdAt": "Created At",
-        "status": "Status",
-        "summary": "Summary"
+        "title": "Ders Programları",
+        "createdAt": "Oluşturma Tarihi",
+        "status": "Durum",
+        "summary": "Özet"
     },
     "professor": {
         "department": "DEPARTMENT",
@@ -132,21 +133,22 @@
         "time": "TIME"
     },
     "button": {
-        "newSchedule": "New Schedule",
-        "add": "Add",
-        "upload": "Upload",
-        "addBusyDay": "Add Busy Day",
-        "addClassroom": "Add Busy Day",
-        "addConflict": "Add Conflict",
-        "addCourse": "Add Course",
-        "clearTable": "Clear Table",
-        "generate": "Generate",
-        "addReservedDay": "Add Reserved Day"
+        "newSchedule": "Yeni Program",
+        "add": "Ekle",
+        "upload": "Yükle",
+        "addBusyDay": "Meşgul Gün Ekle",
+        "addClassroom": "Sınıf Ekle",
+        "addConflict": "Ek Çakışan Ders Ekle",
+        "addCourse": "Ders Ekle",
+        "addSplit": "Ayrılacak Ders Ekle",
+        "clearTable": "Tabloyu Temizle",
+        "generate": "Oluştur",
+        "addReservedDay": "Rezervasyon Ekle"
     },
     "feedback": {
-        "loading": "Loading...",
-        "search": "Search...",
-        "generating": "Please wait while your schedule is being created. This process may take a few minutes.",
-        "resStatus": "Server response code"
+        "loading": "Yükleniyor...",
+        "search": "Ara...",
+        "generating": "Lütfen programınız oluşturulurken bekleyin. Bu işlem birkaç dakika sürebilir.",
+        "resStatus": "Sunucu cevabı"
     }
 }

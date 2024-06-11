@@ -35,7 +35,7 @@ function SplitView() {
       <div className="flex flex-row space-x-4 pl-4 mb-4 justify-start">
         <UploadButton handler={readFile} />
         <IconButton
-          text="Add Split Day"
+          text={t("button.addSplit")}
           icon={faPlus}
           onClick={() => setModalState(true)}
         />

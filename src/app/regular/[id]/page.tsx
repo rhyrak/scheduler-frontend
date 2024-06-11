@@ -121,7 +121,7 @@ export default function Page() {
   return (
     <>
       <div
-        className="w-full mx-auto max-w-fit flex flex-col gap-16 mt-8 page"
+        className="w-full overflow-clip mx-auto max-w-fit flex flex-col gap-16 mt-8 page"
         ref={contentRef}
         id="body-regular"
       >

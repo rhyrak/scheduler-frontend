@@ -53,7 +53,7 @@ function GenerateView() {
           <>
             <hr className="my-2 invisible" />
             <p>
-              Server response status: {(response as Response).status}
+              {t("feedback.resStatus")}: {(response as Response).status}
               {(response as Response).ok && " OK!"}
             </p>
           </>

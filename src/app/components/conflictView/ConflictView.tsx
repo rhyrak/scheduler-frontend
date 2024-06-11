@@ -14,8 +14,8 @@ function ConflictView() {
   const [t, i18n] = useTranslation("global");
   const headers: string[] = [
     t("conflict.headers.firstDepartment"),
-    t("conflict.headers.secondDepartment"),
     t("conflict.headers.firstCourse"),
+    t("conflict.headers.secondDepartment"),
     t("conflict.headers.secondCourse"),
     t("conflict.headers.actions"),
   ];

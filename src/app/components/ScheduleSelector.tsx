@@ -1,6 +1,6 @@
 "use client";
 
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { faCircleInfo, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect, Fragment } from "react";
 import Modal from "./Modal";
@@ -32,12 +32,15 @@ const ScheduleSelector = ({
 
   return (
     <div className="p-8 bg-slate-100 shadow-md rounded-2xl">
-      <h2 className="font-bold text-xl text-center mb-4">Schedules</h2>
+      <h2 className="font-bold text-xl text-center mb-4">
+        {t("selector.title")}
+      </h2>
       <ul className="border border-slate-500">
         {loading ? (
           <li>{t("feedback.loading")}</li>
         ) : (
           <SchedulesTable
+            api={api}
             headers={[
               t("selector.createdAt"),
               t("selector.status"),
@@ -80,12 +83,14 @@ function SchedulesTable({
   hrefBase,
   setModalState,
   setModalText,
+  api,
 }: {
   headers: string[];
   schedules: ScheduleMeta[];
   hrefBase: string;
   setModalState: Function;
   setModalText: Function;
+  api: string;
 }) {
   return (
     <div className="relative overflow-x-auto max-h-[60svh]">
@@ -104,16 +109,21 @@ function SchedulesTable({
           </tr>
         </thead>
         <tbody>
-          {schedules.map((s: ScheduleMeta, _) => (
-            <ReadRow
-              key={s.id}
-              timestamp={s.id}
-              status={s.status}
-              hrefBase={hrefBase}
-              setModalState={setModalState}
-              setModalText={() => setModalText(s.report)}
-            />
-          ))}
+          {schedules
+            .sort((a: ScheduleMeta, b: ScheduleMeta) => {
+              return parseInt(b.id) - parseInt(a.id);
+            })
+            .map((s: ScheduleMeta, _) => (
+              <ReadRow
+                key={s.id}
+                api={api}
+                timestamp={s.id}
+                status={s.status}
+                hrefBase={hrefBase}
+                setModalState={setModalState}
+                setModalText={() => setModalText(s.report)}
+              />
+            ))}
         </tbody>
       </table>
     </div>
@@ -126,16 +136,21 @@ function ReadRow({
   hrefBase,
   setModalState,
   setModalText,
+  api,
 }: {
   timestamp: string;
   status: string;
   hrefBase: string;
   setModalState: Function;
   setModalText: Function;
+  api: string;
 }) {
+  const [deleted, setDeleted] = useState(false);
   return (
     <tr
-      className="bg-white hover:bg-slate-50 border-b hover:cursor-pointer last:border-none"
+      className={`bg-white hover:bg-slate-50 border-b hover:cursor-pointer last:border-none ${
+        deleted && "hidden"
+      }`}
       key={timestamp}
       onClick={() => {
         location.assign(hrefBase + timestamp);
@@ -152,6 +167,18 @@ function ReadRow({
             e.stopPropagation();
             setModalState(true);
             setModalText(timestamp);
+          }}
+        />
+        <FontAwesomeIcon
+          icon={faTrash}
+          className="cursor-pointer pr-6 text-slate-500 text-lg hover:text-slate-900"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            fetch(api + "/" + timestamp, {
+              method: "DELETE",
+            });
+            setDeleted(true);
           }}
         />
       </td>

@@ -119,6 +119,7 @@
         "generate": "Generate"
     },
     "selector": {
+        "title": "Schedules",
         "createdAt": "Created At",
         "status": "Status",
         "summary": "Summary"
@@ -136,9 +137,10 @@
         "add": "Add",
         "upload": "Upload",
         "addBusyDay": "Add Busy Day",
-        "addClassroom": "Add Busy Day",
+        "addClassroom": "Add Classroom",
         "addConflict": "Add Conflict",
         "addCourse": "Add Course",
+        "addSplit": "Add Split",
         "clearTable": "Clear Table",
         "generate": "Generate",
         "addReservedDay": "Add Reserved Day"
